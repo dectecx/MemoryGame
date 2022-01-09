@@ -105,7 +105,7 @@ namespace MemoryGame.Forms
             switch (GameStatus)
             {
                 default:
-                    SysMsgLabel.Text = "記憶Time~";
+                    SysMsgLabel.Text = "記憶時間";
                     GameStatus = StatusEnum.MemoryTime;
                     LastTime = 8;                   // 記憶時間
                     MemoryTimer.Enabled = true;
@@ -229,11 +229,6 @@ namespace MemoryGame.Forms
             ScoreLabel.Text = scoreText;
             MessageBox.Show(scoreText);
             PushFlow();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            label1.Text = ClickCount.ToString();
         }
     }
 }

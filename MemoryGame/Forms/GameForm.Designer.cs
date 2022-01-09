@@ -37,8 +37,6 @@
             this.SysMsgLabel = new System.Windows.Forms.Label();
             this.MemoryTimer = new System.Windows.Forms.Timer(this.components);
             this.ScoreLabel = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LastTimeLabel
@@ -119,28 +117,12 @@
             this.ScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ScoreLabel.Visible = false;
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 500;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 163);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 12);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
-            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MemoryGame.Properties.Resources.wood00;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.ScoreLabel);
             this.Controls.Add(this.SysMsgLabel);
             this.Controls.Add(this.GameLevelValueLabel);
@@ -164,7 +146,5 @@
         private System.Windows.Forms.Label SysMsgLabel;
         private System.Windows.Forms.Timer MemoryTimer;
         private System.Windows.Forms.Label ScoreLabel;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label1;
     }
 }
