@@ -107,15 +107,15 @@ namespace MemoryGame.Forms
                 default:
                     SysMsgLabel.Text = "記憶Time~";
                     GameStatus = StatusEnum.MemoryTime;
-                    LastTime = 1;
+                    LastTime = 8;                   // 記憶時間
                     MemoryTimer.Enabled = true;
                     DisableChildPictureBox();
                     break;
                 case StatusEnum.MemoryTime:
                     SysMsgLabel.Text = "遊戲開始";
                     GameStatus = StatusEnum.Gaming;
-                    LastTime = 20;
-                    ClickCount = 0;
+                    LastTime = 20;                  // 遊戲限時
+                    ClickCount = 0;                 // 總點擊次數
                     GamingTimer.Enabled = true;
                     EnableChildPictureBox();
                     MaskChildPictureBox();
