@@ -38,6 +38,7 @@
             // 
             // DesktopPanel
             // 
+            this.DesktopPanel.BackgroundImage = global::MemoryGame.Properties.Resources.wood00;
             this.DesktopPanel.Controls.Add(this.VersionLabel);
             this.DesktopPanel.Controls.Add(this.LogoPictureBox);
             this.DesktopPanel.Controls.Add(this.MenuBtn);
@@ -50,6 +51,7 @@
             // VersionLabel
             // 
             this.VersionLabel.AutoSize = true;
+            this.VersionLabel.BackColor = System.Drawing.Color.BurlyWood;
             this.VersionLabel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.VersionLabel.Location = new System.Drawing.Point(730, 421);
             this.VersionLabel.Name = "VersionLabel";
@@ -60,6 +62,7 @@
             // LogoPictureBox
             // 
             this.LogoPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LogoPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.LogoPictureBox.Image = global::MemoryGame.Properties.Resources.Home_LogoText;
             this.LogoPictureBox.Location = new System.Drawing.Point(0, 63);
             this.LogoPictureBox.Name = "LogoPictureBox";
@@ -77,7 +80,7 @@
             this.MenuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.MenuBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.MenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MenuBtn.Location = new System.Drawing.Point(319, 297);
+            this.MenuBtn.Location = new System.Drawing.Point(323, 297);
             this.MenuBtn.Name = "MenuBtn";
             this.MenuBtn.Size = new System.Drawing.Size(155, 64);
             this.MenuBtn.TabIndex = 0;

@@ -1,7 +1,7 @@
 ﻿namespace MemoryGame.Models.Enum
 {
     /// <summary>
-    /// 難度
+    /// 遊戲難度
     /// </summary>
     public enum LevelEnum
     {

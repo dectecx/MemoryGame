@@ -72,6 +72,14 @@ namespace MemoryGame
         }
 
         /// <summary>
+        /// 返回首頁
+        /// </summary>
+        private void HomeBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new HomeForm(), "首頁");
+        }
+
+        /// <summary>
         /// (尚未實作UI)關閉程式
         /// </summary>
         private void btnClose_Click(object sender, EventArgs e)

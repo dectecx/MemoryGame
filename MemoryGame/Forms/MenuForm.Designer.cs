@@ -73,6 +73,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::MemoryGame.Properties.Resources.wood00;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.HardBtn);
             this.Controls.Add(this.NormalBtn);

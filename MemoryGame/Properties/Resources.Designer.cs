@@ -123,6 +123,16 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap HomeIcon {
+            get {
+                object obj = ResourceManager.GetObject("HomeIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap lemon {
             get {
                 object obj = ResourceManager.GetObject("lemon", resourceCulture);
@@ -146,6 +156,36 @@ namespace MemoryGame.Properties {
         internal static System.Drawing.Bitmap tennis {
             get {
                 object obj = ResourceManager.GetObject("tennis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap wood00 {
+            get {
+                object obj = ResourceManager.GetObject("wood00", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap wood01 {
+            get {
+                object obj = ResourceManager.GetObject("wood01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap wood02 {
+            get {
+                object obj = ResourceManager.GetObject("wood02", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
