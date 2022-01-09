@@ -30,8 +30,16 @@ namespace MemoryGame
 
             if (ChildForm == null)
             {
-                OpenChildForm(new HomeForm(), "首頁");
+                GoHome();
             }
+        }
+
+        /// <summary>
+        /// 回首頁
+        /// </summary>
+        public void GoHome()
+        {
+            OpenChildForm(new HomeForm(), "首頁");
         }
 
         /// <summary>
@@ -76,15 +84,7 @@ namespace MemoryGame
         /// </summary>
         private void HomeBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new HomeForm(), "首頁");
-        }
-
-        /// <summary>
-        /// (尚未實作UI)關閉程式
-        /// </summary>
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            GoHome();
         }
     }
 }

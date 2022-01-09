@@ -36,6 +36,9 @@
             this.GamingTimer = new System.Windows.Forms.Timer(this.components);
             this.SysMsgLabel = new System.Windows.Forms.Label();
             this.MemoryTimer = new System.Windows.Forms.Timer(this.components);
+            this.ScoreLabel = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LastTimeLabel
@@ -45,9 +48,9 @@
             this.LastTimeLabel.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.LastTimeLabel.Location = new System.Drawing.Point(328, 13);
             this.LastTimeLabel.Name = "LastTimeLabel";
-            this.LastTimeLabel.Size = new System.Drawing.Size(145, 40);
+            this.LastTimeLabel.Size = new System.Drawing.Size(192, 40);
             this.LastTimeLabel.TabIndex = 0;
-            this.LastTimeLabel.Text = "剩餘時間";
+            this.LastTimeLabel.Text = "{{LastTime}}";
             this.LastTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GameLevelLabel
@@ -94,14 +97,42 @@
             this.SysMsgLabel.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.SysMsgLabel.Location = new System.Drawing.Point(94, 22);
             this.SysMsgLabel.Name = "SysMsgLabel";
-            this.SysMsgLabel.Size = new System.Drawing.Size(123, 34);
+            this.SysMsgLabel.Size = new System.Drawing.Size(147, 34);
             this.SysMsgLabel.TabIndex = 0;
-            this.SysMsgLabel.Text = "系統訊息";
+            this.SysMsgLabel.Text = "{{SysMsg}}";
             // 
             // MemoryTimer
             // 
             this.MemoryTimer.Interval = 1000;
             this.MemoryTimer.Tick += new System.EventHandler(this.MemoryTimer_Tick);
+            // 
+            // ScoreLabel
+            // 
+            this.ScoreLabel.AutoSize = true;
+            this.ScoreLabel.BackColor = System.Drawing.Color.LightPink;
+            this.ScoreLabel.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ScoreLabel.Location = new System.Drawing.Point(94, 22);
+            this.ScoreLabel.Name = "ScoreLabel";
+            this.ScoreLabel.Size = new System.Drawing.Size(121, 34);
+            this.ScoreLabel.TabIndex = 0;
+            this.ScoreLabel.Text = "{{Score}}";
+            this.ScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ScoreLabel.Visible = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 163);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 12);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "label1";
             // 
             // GameForm
             // 
@@ -109,6 +140,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MemoryGame.Properties.Resources.wood00;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ScoreLabel);
             this.Controls.Add(this.SysMsgLabel);
             this.Controls.Add(this.GameLevelValueLabel);
             this.Controls.Add(this.GamePanel);
@@ -130,5 +163,8 @@
         private System.Windows.Forms.Timer GamingTimer;
         private System.Windows.Forms.Label SysMsgLabel;
         private System.Windows.Forms.Timer MemoryTimer;
+        private System.Windows.Forms.Label ScoreLabel;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
     }
 }

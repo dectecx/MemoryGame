@@ -20,7 +20,7 @@
         /// <summary>
         /// 遊戲暫停
         /// </summary>
-        Stop,
+        //Stop,
         /// <summary>
         /// 遊戲結束
         /// </summary>

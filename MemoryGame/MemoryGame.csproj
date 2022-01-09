@@ -88,6 +88,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Enum\CardEnum.cs" />
     <Compile Include="Models\Enum\LevelEnum.cs" />
     <Compile Include="Models\Enum\StatusEnum.cs" />
     <Compile Include="Program.cs" />
