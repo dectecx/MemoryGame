@@ -37,7 +37,7 @@
             // 
             this.EasyBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.EasyBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.EasyBtn.Location = new System.Drawing.Point(476, 157);
+            this.EasyBtn.Location = new System.Drawing.Point(491, 104);
             this.EasyBtn.Name = "EasyBtn";
             this.EasyBtn.Size = new System.Drawing.Size(134, 56);
             this.EasyBtn.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             this.NormalBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.NormalBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.NormalBtn.Location = new System.Drawing.Point(476, 242);
+            this.NormalBtn.Location = new System.Drawing.Point(491, 189);
             this.NormalBtn.Name = "NormalBtn";
             this.NormalBtn.Size = new System.Drawing.Size(134, 56);
             this.NormalBtn.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             this.HardBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.HardBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.HardBtn.Location = new System.Drawing.Point(476, 326);
+            this.HardBtn.Location = new System.Drawing.Point(491, 273);
             this.HardBtn.Name = "HardBtn";
             this.HardBtn.Size = new System.Drawing.Size(134, 56);
             this.HardBtn.TabIndex = 2;

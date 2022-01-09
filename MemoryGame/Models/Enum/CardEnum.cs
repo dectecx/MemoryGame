@@ -8,6 +8,7 @@ namespace MemoryGame.Models.Enum
     /// </summary>
     public static class CardEnum
     {
+        public static Bitmap question_mark = Properties.Resources.question_mark;
         public static Bitmap banana = Properties.Resources.banana;
         public static Bitmap baseball = Properties.Resources.baseball;
         public static Bitmap dices = Properties.Resources.dices;

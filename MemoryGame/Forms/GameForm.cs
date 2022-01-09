@@ -34,6 +34,9 @@ namespace MemoryGame.Forms
         public GameForm(LevelEnum level)
         {
             InitializeComponent();
+            LastTimeLabel.Text = string.Empty;
+            SysMsgLabel.Text = string.Empty;
+            ScoreLabel.Text = string.Empty;
             GameLevel = level;
 
             switch (GameLevel)
@@ -104,7 +107,7 @@ namespace MemoryGame.Forms
                 default:
                     SysMsgLabel.Text = "記憶Time~";
                     GameStatus = StatusEnum.MemoryTime;
-                    LastTime = 8;
+                    LastTime = 1;
                     MemoryTimer.Enabled = true;
                     DisableChildPictureBox();
                     break;
@@ -115,6 +118,7 @@ namespace MemoryGame.Forms
                     ClickCount = 0;
                     GamingTimer.Enabled = true;
                     EnableChildPictureBox();
+                    MaskChildPictureBox();
                     break;
                 case StatusEnum.Gaming:
                     GameStatus = StatusEnum.GameOver;
@@ -177,6 +181,20 @@ namespace MemoryGame.Forms
                 if (ctl is PictureBox pictureBox)
                 {
                     pictureBox.Enabled = false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// 遮罩圖片
+        /// </summary>
+        private void MaskChildPictureBox()
+        {
+            foreach (Control ctl in ChildForm.Controls)
+            {
+                if (ctl is PictureBox pictureBox)
+                {
+                    pictureBox.Image = CardEnum.question_mark;
                 }
             }
         }

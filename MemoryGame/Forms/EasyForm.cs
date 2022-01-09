@@ -23,6 +23,7 @@ namespace MemoryGame.Forms
         /// 第一次點擊
         /// </summary>
         private PictureBox FirstClick;
+
         /// <summary>
         /// 第二次點擊
         /// </summary>
@@ -57,6 +58,15 @@ namespace MemoryGame.Forms
             pictureBox6.Image = cardPool[5];
             pictureBox7.Image = cardPool[6];
             pictureBox8.Image = cardPool[7];
+
+            pictureBox1.Tag = cardPool[0];
+            pictureBox2.Tag = cardPool[1];
+            pictureBox3.Tag = cardPool[2];
+            pictureBox4.Tag = cardPool[3];
+            pictureBox5.Tag = cardPool[4];
+            pictureBox6.Tag = cardPool[5];
+            pictureBox7.Tag = cardPool[6];
+            pictureBox8.Tag = cardPool[7];
         }
 
         /// <summary>
@@ -68,6 +78,7 @@ namespace MemoryGame.Forms
             ParentGameForm.AddClickCount();
             pictureBox.Enabled = false;
             pictureBox.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox.Image = (Image)pictureBox.Tag;
             if (FirstClick == null)
             {
                 FirstClick = pictureBox;
@@ -78,19 +89,60 @@ namespace MemoryGame.Forms
                 SecondClick = pictureBox;
             }
 
+            // 比對是否一樣
             if (FirstClick.Image == SecondClick.Image)
             {
-                FirstClick.Visible = false;
-                SecondClick.Visible = false;
-                Undone--;
+                // 短暫顯示後再隱藏
+                MatchTimer.Start();
             }
+            else
+            {
+                // 短暫顯示後再遮罩
+                MaskTimer.Start();
+            }
+            // 先暫時鎖定所有圖片，等預覽的圖消失後再繼續遊戲
+            FreezePictureBox();
+        }
 
-            FirstClick.Enabled = true;
-            FirstClick.BorderStyle = BorderStyle.None;
+        /// <summary>
+        /// 短暫顯示圖片後再遮罩
+        /// </summary>
+        private void MaskTimer_Tick(object sender, EventArgs e)
+        {
+            MaskTimer.Stop();
+            FirstClick.Image = CardEnum.question_mark;
+            SecondClick.Image = CardEnum.question_mark;
+
+            UnfreezePictureBox();
+        }
+
+        /// <summary>
+        /// 短暫顯示圖片後再隱藏
+        /// </summary>
+        private void MatchTimer_Tick(object sender, EventArgs e)
+        {
+            MatchTimer.Stop();
+            FirstClick.Visible = false;
+            SecondClick.Visible = false;
+            Undone--;
+
+            UnfreezePictureBox();
+        }
+
+        /// <summary>
+        /// 解除鎖定圖片物件
+        /// </summary>
+        private void UnfreezePictureBox()
+        {
+            foreach (Control ctl in this.Controls)
+            {
+                if (ctl is PictureBox pictureBox && pictureBox.Visible)
+                {
+                    pictureBox.Enabled = true;
+                    pictureBox.BorderStyle = BorderStyle.None;
+                }
+            }
             FirstClick = null;
-
-            SecondClick.Enabled = true;
-            SecondClick.BorderStyle = BorderStyle.None;
             SecondClick = null;
 
             // 全數按完
@@ -98,6 +150,20 @@ namespace MemoryGame.Forms
             {
                 // 獲勝
                 ParentGameForm.GoToWin();
+            }
+        }
+
+        /// <summary>
+        /// 鎖定圖片物件
+        /// </summary>
+        private void FreezePictureBox()
+        {
+            foreach (Control ctl in this.Controls)
+            {
+                if (ctl is PictureBox pictureBox && pictureBox.Visible)
+                {
+                    pictureBox.Enabled = false;
+                }
             }
         }
 
