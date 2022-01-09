@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.DesktopPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.MenuBtn = new System.Windows.Forms.Button();
             this.VersionLabel = new System.Windows.Forms.Label();
+            this.LogoPictureBox = new System.Windows.Forms.PictureBox();
+            this.MenuBtn = new System.Windows.Forms.Button();
             this.DesktopPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // DesktopPanel
             // 
             this.DesktopPanel.Controls.Add(this.VersionLabel);
-            this.DesktopPanel.Controls.Add(this.pictureBox1);
+            this.DesktopPanel.Controls.Add(this.LogoPictureBox);
             this.DesktopPanel.Controls.Add(this.MenuBtn);
             this.DesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DesktopPanel.Location = new System.Drawing.Point(0, 0);
@@ -47,16 +47,26 @@
             this.DesktopPanel.Size = new System.Drawing.Size(800, 450);
             this.DesktopPanel.TabIndex = 1;
             // 
-            // pictureBox1
+            // VersionLabel
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = global::MemoryGame.Properties.Resources.Home_LogoText;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 63);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.VersionLabel.AutoSize = true;
+            this.VersionLabel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.VersionLabel.Location = new System.Drawing.Point(730, 421);
+            this.VersionLabel.Name = "VersionLabel";
+            this.VersionLabel.Size = new System.Drawing.Size(58, 20);
+            this.VersionLabel.TabIndex = 2;
+            this.VersionLabel.Text = "ver 1.0";
+            // 
+            // LogoPictureBox
+            // 
+            this.LogoPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LogoPictureBox.Image = global::MemoryGame.Properties.Resources.Home_LogoText;
+            this.LogoPictureBox.Location = new System.Drawing.Point(0, 63);
+            this.LogoPictureBox.Name = "LogoPictureBox";
+            this.LogoPictureBox.Size = new System.Drawing.Size(800, 130);
+            this.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.LogoPictureBox.TabIndex = 1;
+            this.LogoPictureBox.TabStop = false;
             // 
             // MenuBtn
             // 
@@ -75,16 +85,6 @@
             this.MenuBtn.Click += new System.EventHandler(this.MenuBtn_Click);
             this.MenuBtn.MouseEnter += new System.EventHandler(this.MenuBtn_MouseEnter);
             // 
-            // VersionLabel
-            // 
-            this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.VersionLabel.Location = new System.Drawing.Point(730, 421);
-            this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(58, 20);
-            this.VersionLabel.TabIndex = 2;
-            this.VersionLabel.Text = "ver 1.0";
-            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -95,14 +95,14 @@
             this.Text = "HomeForm";
             this.DesktopPanel.ResumeLayout(false);
             this.DesktopPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox LogoPictureBox;
         private System.Windows.Forms.Button MenuBtn;
         private System.Windows.Forms.Panel DesktopPanel;
         private System.Windows.Forms.Label VersionLabel;

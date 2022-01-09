@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MemoryGame.Models.Enum;
+using System;
 using System.Windows.Forms;
 
 namespace MemoryGame.Forms
@@ -17,9 +11,28 @@ namespace MemoryGame.Forms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 初級
+        /// </summary>
+        private void EasyBtn_Click(object sender, EventArgs e)
         {
+            MainForm.Instance.SetActiveForm(new GameForm(LevelEnum.Easy), "初級");
+        }
 
+        /// <summary>
+        /// 中級
+        /// </summary>
+        private void NormalBtn_Click(object sender, EventArgs e)
+        {
+            MainForm.Instance.SetActiveForm(new GameForm(LevelEnum.Normal), "中級");
+        }
+
+        /// <summary>
+        /// 高級
+        /// </summary>
+        private void HardBtn_Click(object sender, EventArgs e)
+        {
+            MainForm.Instance.SetActiveForm(new GameForm(LevelEnum.Hard), "高級");
         }
     }
 }

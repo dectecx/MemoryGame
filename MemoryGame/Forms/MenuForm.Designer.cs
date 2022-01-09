@@ -29,37 +29,45 @@
         private void InitializeComponent()
         {
             this.EasyBtn = new System.Windows.Forms.Button();
-            this.normalBtn = new System.Windows.Forms.Button();
+            this.NormalBtn = new System.Windows.Forms.Button();
             this.HardBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // EasyBtn
             // 
-            this.EasyBtn.Location = new System.Drawing.Point(333, 117);
+            this.EasyBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.EasyBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.EasyBtn.Location = new System.Drawing.Point(476, 157);
             this.EasyBtn.Name = "EasyBtn";
-            this.EasyBtn.Size = new System.Drawing.Size(75, 23);
+            this.EasyBtn.Size = new System.Drawing.Size(134, 56);
             this.EasyBtn.TabIndex = 0;
             this.EasyBtn.Text = "初級";
-            this.EasyBtn.UseVisualStyleBackColor = true;
-            this.EasyBtn.Click += new System.EventHandler(this.button1_Click);
+            this.EasyBtn.UseVisualStyleBackColor = false;
+            this.EasyBtn.Click += new System.EventHandler(this.EasyBtn_Click);
             // 
-            // normalBtn
+            // NormalBtn
             // 
-            this.normalBtn.Location = new System.Drawing.Point(333, 169);
-            this.normalBtn.Name = "normalBtn";
-            this.normalBtn.Size = new System.Drawing.Size(75, 23);
-            this.normalBtn.TabIndex = 1;
-            this.normalBtn.Text = "中級";
-            this.normalBtn.UseVisualStyleBackColor = true;
+            this.NormalBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.NormalBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.NormalBtn.Location = new System.Drawing.Point(476, 242);
+            this.NormalBtn.Name = "NormalBtn";
+            this.NormalBtn.Size = new System.Drawing.Size(134, 56);
+            this.NormalBtn.TabIndex = 1;
+            this.NormalBtn.Text = "中級";
+            this.NormalBtn.UseVisualStyleBackColor = false;
+            this.NormalBtn.Click += new System.EventHandler(this.NormalBtn_Click);
             // 
             // HardBtn
             // 
-            this.HardBtn.Location = new System.Drawing.Point(333, 230);
+            this.HardBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.HardBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.HardBtn.Location = new System.Drawing.Point(476, 326);
             this.HardBtn.Name = "HardBtn";
-            this.HardBtn.Size = new System.Drawing.Size(75, 23);
+            this.HardBtn.Size = new System.Drawing.Size(134, 56);
             this.HardBtn.TabIndex = 2;
             this.HardBtn.Text = "高級";
-            this.HardBtn.UseVisualStyleBackColor = true;
+            this.HardBtn.UseVisualStyleBackColor = false;
+            this.HardBtn.Click += new System.EventHandler(this.HardBtn_Click);
             // 
             // MenuForm
             // 
@@ -67,7 +75,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.HardBtn);
-            this.Controls.Add(this.normalBtn);
+            this.Controls.Add(this.NormalBtn);
             this.Controls.Add(this.EasyBtn);
             this.Name = "MenuForm";
             this.Text = "MenuForm";
@@ -78,7 +86,7 @@
         #endregion
 
         private System.Windows.Forms.Button EasyBtn;
-        private System.Windows.Forms.Button normalBtn;
+        private System.Windows.Forms.Button NormalBtn;
         private System.Windows.Forms.Button HardBtn;
     }
 }

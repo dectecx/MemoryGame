@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MemoryGame.Forms
@@ -15,11 +9,11 @@ namespace MemoryGame.Forms
         public HomeForm()
         {
             InitializeComponent();
-            this.Text = string.Empty;
-            this.ControlBox = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
+        /// <summary>
+        /// 開始按鈕縮放 - 放大
+        /// </summary>
         private void MenuBtn_MouseEnter(object sender, EventArgs e)
         {
             int zoomAbs = 30;
@@ -28,6 +22,9 @@ namespace MemoryGame.Forms
             MenuBtn.Cursor = Cursors.Hand;
         }
 
+        /// <summary>
+        /// 開始按鈕縮放 - 縮小
+        /// </summary>
         private void MenuBtn_MouseLeave(object sender, EventArgs e)
         {
             int zoomAbs = 30;
@@ -35,6 +32,11 @@ namespace MemoryGame.Forms
             MenuBtn.Location = new Point(MenuBtn.Location.X + (zoomAbs / 2), MenuBtn.Location.Y + (zoomAbs / 2));
         }
 
+        /// <summary>
+        /// 開啟按鈕 - 載入選單
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuBtn_Click(object sender, EventArgs e)
         {
             MainForm.Instance.SetActiveForm(new Forms.MenuForm(), "選單");
