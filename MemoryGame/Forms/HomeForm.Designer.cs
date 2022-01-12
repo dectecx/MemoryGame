@@ -44,8 +44,9 @@
             this.DesktopPanel.Controls.Add(this.MenuBtn);
             this.DesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DesktopPanel.Location = new System.Drawing.Point(0, 0);
+            this.DesktopPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DesktopPanel.Name = "DesktopPanel";
-            this.DesktopPanel.Size = new System.Drawing.Size(800, 450);
+            this.DesktopPanel.Size = new System.Drawing.Size(1067, 562);
             this.DesktopPanel.TabIndex = 1;
             // 
             // VersionLabel
@@ -53,9 +54,10 @@
             this.VersionLabel.AutoSize = true;
             this.VersionLabel.BackColor = System.Drawing.Color.BurlyWood;
             this.VersionLabel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.VersionLabel.Location = new System.Drawing.Point(730, 421);
+            this.VersionLabel.Location = new System.Drawing.Point(973, 526);
+            this.VersionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(58, 20);
+            this.VersionLabel.Size = new System.Drawing.Size(74, 25);
             this.VersionLabel.TabIndex = 2;
             this.VersionLabel.Text = "ver 1.0";
             // 
@@ -64,9 +66,10 @@
             this.LogoPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LogoPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.LogoPictureBox.Image = global::MemoryGame.Properties.Resources.Home_LogoText;
-            this.LogoPictureBox.Location = new System.Drawing.Point(0, 63);
+            this.LogoPictureBox.Location = new System.Drawing.Point(0, 79);
+            this.LogoPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LogoPictureBox.Name = "LogoPictureBox";
-            this.LogoPictureBox.Size = new System.Drawing.Size(800, 130);
+            this.LogoPictureBox.Size = new System.Drawing.Size(1067, 162);
             this.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.LogoPictureBox.TabIndex = 1;
             this.LogoPictureBox.TabStop = false;
@@ -80,20 +83,23 @@
             this.MenuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.MenuBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.MenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MenuBtn.Location = new System.Drawing.Point(323, 297);
+            this.MenuBtn.Location = new System.Drawing.Point(431, 371);
+            this.MenuBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MenuBtn.Name = "MenuBtn";
-            this.MenuBtn.Size = new System.Drawing.Size(155, 64);
+            this.MenuBtn.Size = new System.Drawing.Size(207, 80);
             this.MenuBtn.TabIndex = 0;
             this.MenuBtn.UseVisualStyleBackColor = false;
             this.MenuBtn.Click += new System.EventHandler(this.MenuBtn_Click);
             this.MenuBtn.MouseEnter += new System.EventHandler(this.MenuBtn_MouseEnter);
+            this.MenuBtn.MouseLeave += new System.EventHandler(this.MenuBtn_MouseLeave);
             // 
             // HomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 562);
             this.Controls.Add(this.DesktopPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomeForm";
             this.Text = "HomeForm";
             this.DesktopPanel.ResumeLayout(false);
